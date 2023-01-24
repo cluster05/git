@@ -1,7 +1,6 @@
 package main
 
 import "fmt"
-
 func main() {
-	fmt.Println("Hello World - Fature 3")
+	fmt.Println("Hello World - Fature MVP 1")
 }
