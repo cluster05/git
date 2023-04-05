@@ -14,7 +14,7 @@ Move all files
 
 ```git add .```
 
-**Move file/s from Staging Area to Working Directory file**
+**Move file/s from Staging Area to Working Directory file (Initial Stage) **
 
 Moved specific file
 
@@ -24,7 +24,15 @@ Move all files
 
 ```git rm --cached .```
 
-<hr/>
+**Move file/s from Staging Area to Working Directory file**
+
+Moved specific file
+
+```git rm --staged <file-name>```
+
+Move all files
+
+```git rm --staged .```
 
 ##### Stage 2
 
@@ -41,6 +49,34 @@ Note : Description -m is optional
 It will show all the data from git Local Repository
 
 ```git log```
+
+<hr/>
+
+### Git Differance
+
+Check changes between Working Area and Staging Area
+
+```git diff```
+
+Check changes between Staging Area and Repository Area
+
+```git diff --staged```
+
+Check changes between Working Area and Repository Area
+
+```git diff head```
+
+<hr/>
+
+### How to GIT store the Data
+
++ GIT store the data in form of key and values 
++ Values is nothing but content of file
++ You give the values and it will calculate a key from it, that is nothing but hash
++ GIT calculate the heshes with SHA1 algorithm
+
+<hr/>
+
 
 
 
