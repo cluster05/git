@@ -14,7 +14,7 @@ Move all files
 
 ```git add .```
 
-**Move file/s from Staging Area to Working Directory file (Initial Stage) **
+**Move file/s from Staging Area to Working Directory file (Initial Stage)**
 
 Moved specific file
 
@@ -50,6 +50,10 @@ It will show all the data from git Local Repository
 
 ```git log```
 
+View All commit in one line format
+
+```git log --oneline```
+
 <hr/>
 
 ### Git Differance
@@ -77,6 +81,37 @@ Check changes between Working Area and Repository Area
 
 <hr/>
 
+### GIT Branching 
+In Git, branches are a part of your everyday development process. Git branches are effectively a pointer to a snapshot of your changes.
 
+[Visualizing GIT](https://git-school.github.io/visualizing-git)
 
+**Create New Branch**
 
+```git branch <new-branch-name>```
+
+**Change Branch**
+
+```git checkout <branch-name>```
+
+###### ```-b``` flag will create new branch and checkout to that branch
+
+```git checkout -b <new-branch-name>```
+
+**View All Branch**
+
+```git branch```
+
+**Rename the branch**
+
+Checkout to that branch
+
+```git branch -m <new-branch-name>```
+
+**Delete the branch**
+
+Checkout to other branch from the branch you want to delete
+
+```git branch -d <branch-name>```
+
+<hr/>
