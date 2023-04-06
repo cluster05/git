@@ -126,3 +126,13 @@ Checkout to target branch (branch on which you want to merge your changes)
 
 ( if new commit on source branch it will do recursive merge )
 
+**Abort Merge** 
+
+```git merge --abort```
+
+### GIT Resolve conflict
+
+1. open file/s on which conflict is occurred and decide which change you want keep from it.
+2. add to staging area 
+3. commit with message 
+
