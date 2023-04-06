@@ -115,3 +115,14 @@ Checkout to other branch from the branch you want to delete
 ```git branch -d <branch-name>```
 
 <hr/>
+
+### GIT Merge
+
+Checkout to target branch (branch on which you want to merge your changes)
+
+```git merge <source-branch>``` 
+
+( if no new commit on source branch it will do fast-forward merge )
+
+( if new commit on source branch it will do recursive merge )
+
