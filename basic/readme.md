@@ -205,4 +205,70 @@ Eg:
 
 <hr/>
 
-    
+### Cherry Pick
+
+Cherry Pick is used if you want to apply perticalar commit from one branch into another branch
+
+Cherry Pick is mainly used if you don't want to merge the whole branch, and you want some commits
+
+It causes duplicate commit
+
+```git cherry-pick <commit-hash>```
+
+### Git Reset 
+
++ Term reset itself stand for undo things 
++ Reset is often referred as confusing command
++ Rest does different things in different context
++ so that's why it is considered as complex command
+
+
+###### Reset has options
+
++ --hard  : moved the files both to working area and staging area
++ --mixed : moved the files only to stage area ( default option )
++ --soft  : does not move the files
+
+```git reset [option] [commit]```
+
+### GIT Stash
+
+The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy
+
+**Stash the changes**
+
+stash with default
+
+```git stash```
+
+stash with custom name
+
+```git stash save <custom-name>```
+
+**View Stash list**
+
+```git stash list```
+
+**Apply the stash changes** 
+
+Remove stash from stack when pop
+
+```git stash pop```
+
+Don't remove stash from stack when apply
+
+```git stash apply```
+
+View changes before applying
+
+```git shash show stash@{<id>}```
+
+**Delete the stash**
+
+Delete top stash and don't apply 
+
+```git stash drop stash@{<id>}```
+
+Delete all stash list
+
+```git stash clear```
