@@ -54,6 +54,10 @@ View All commit in one line format
 
 ```git log --oneline```
 
+View All commit in one line with Graph
+
+```git log --oneline --graph```
+
 <hr/>
 
 ### Git Differance
@@ -136,3 +140,69 @@ Checkout to target branch (branch on which you want to merge your changes)
 2. add to staging area 
 3. commit with message 
 
+<hr/>
+
+### GIT Rebase
+
++ Git rebase is one of the most powerful git command 
++ Rebasing is often used as alternative to merging
++ Rebasing a branch updates one branch with another branch by applying the commits of one branch on top of the commits of another branch
++ Git Rebase is used to clean up our local commit history
++ Merge preserve history, Rebase doesn't
+
+**When not to use rebase**
++ The branch is public when it is shared to all the developers
++ Most of the teams pefers merger over rebase
+
+**When to use rebase**
++ Cleaning up your commits before sharing your branch
++ Pulling changes from another branch without merge
+
+```git rebase <branch-name>```
+
+Eg : you have branch 
+
+    branch 1
+    branch 2
+
+##### branch 2 commits
++ commit 2.1
++ commit 2.2
+
+#### branch 1 commits
++ commit 1.1
++ commit 1.2
+
+checkout to branch 1 
+
+```git rebase branch-2```
+
+    output
+    + commit 2.1
+    + commit 2.2
+    + commit 1.1
+    + commit 1.2
+
+<hr/>
+
+**Modify or Change the last or latest commit using amend command 
+
+Eg: 
+    
+    file.text
+    Bad WOrd
+    
+###### Committed
+
+    file.text
+    Goo Word
+
+( If you want to add new change to previous commit) 
+
+```git add . ```
+
+```git commit --amend```
+
+<hr/>
+
+    
