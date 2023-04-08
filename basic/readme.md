@@ -401,3 +401,103 @@ For pulling from all branch
 For pulling from specific branch
 
 ```git fetch <remote-name> <bramch>```
+
+### Pull Request 
+
+Pull Request allow developer to alert team members to work that need to be reviewed
+
+They provide a mechanism to approve or reject the work on a given branch
+
+They also help facilitate discussion and feedback on the specifies commits
+
+### Add Collaborators
+
+    TODO // Need to add docs
+
+### Git Branch Rule 
+
+    TODO // Need to add docs
+
+### Git Fork
+
+    TODO // Need to add docs
+
+![git fork flow](../images/img.png)
+
+### Git Tags 
+
+Tags are pointers that refer to particular points in GIT history. We can mark a particular moment in time with a tag.
+
+Tags are most often used to mark version releases in project ( v1.0,v2.0 ) 
+
+Once a tag is created, it always refer to commit.
+
+There are two type of Tag:
+1. Lightweight Tag:
+
+    Lightweight tag is much like a branch that doesn't change - it's just a pointer to commit
+
+2. Annotated Tag : 
+
+   Store extra metadata including the author's data
+   Stored full objects in the git database
+
+**Semantic Versioning**
+
+Semantic versioning spec outlines a standardized versioning system for software releases.
+
+It provides a consistent way for developers to give meaning to their software releases
+
+See Version Meaning : 
+
+      4   .   2   .   1
+
+    Major   Minor   Patch 
+
+Patch : Bug fix
+Minor : New Features are added  ( Still backwards compatible withing Major release)
+Major : Significant changes that is no longer backwards compatible. Features may be removed or changes substantially
+
+### Lightweight Tag
+
+**Create lightweight tag**
+
+```git tag <tag>```
+
+**Viewing Tags**
+
+```git tag```
+
+**View difference between tag**
+
+```git diff <tag> <tag>```
+
+**Search Tag**
+
+```git tag -l "*beta*"```
+
+**Checkout Particular tag**
+
+```git checkout <tag>```
+
+
+### **Annotated Tag**
+
+**Create Annotated tag**
+
+```git tag -a <tag>``` // write the message
+
+**Viewing Annotated Tags info**
+
+```git show <tag> ```
+
+**Push Tag to GitHub**
+
+Push specific tag
+
+```git push <remote> <tag>```
+
+Push all tag 
+
+```git push origin --tags```
+
