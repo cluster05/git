@@ -501,3 +501,16 @@ Push all tag
 
 ```git push origin --tags```
 
+### Git Reflog 
+
+The terms are a short form for Reference logs
+
+These are just logs that git keeps us for as a record
+
+**View Reflog**
+
+```git reflog```
+
+**Get back lost commit**
+
+With the help of reflog we can do that.
