@@ -80,8 +80,8 @@ Check changes between Working Area and Repository Area
 
 + GIT store the data in form of key and values 
 + Values is nothing but content of file
-+ You give the values and it will calculate a key from it, that is nothing but hash
-+ GIT calculate the heshes with SHA1 algorithm
++ You give the values, and it will calculate a key from it, that is nothing but hash
++ GIT calculate the hashes with SHA1 algorithm
 
 <hr/>
 
@@ -152,7 +152,7 @@ Checkout to target branch (branch on which you want to merge your changes)
 
 **When not to use rebase**
 + The branch is public when it is shared to all the developers
-+ Most of the teams pefers merger over rebase
++ Most of the teams prefers merger over rebase
 
 **When to use rebase**
 + Cleaning up your commits before sharing your branch
@@ -207,7 +207,7 @@ Eg:
 
 ### Cherry Pick
 
-Cherry Pick is used if you want to apply perticalar commit from one branch into another branch
+Cherry Pick is used if you want to apply pericardial commit from one branch into another branch
 
 Cherry Pick is mainly used if you don't want to merge the whole branch, and you want some commits
 
@@ -233,7 +233,7 @@ It causes duplicate commit
 
 ### GIT Stash
 
-The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy
+The git stash command takes your uncommitted changes (both staged and unstated), saves them away for later use, and then reverts them from your working copy
 
 **Stash the changes**
 
@@ -272,3 +272,132 @@ Delete top stash and don't apply
 Delete all stash list
 
 ```git stash clear```
+
+<hr/>
+
+### GIT Revert
+
+When your changes are push to remote and other developer pull the data in that case use revert
+
+```git revert <commit-id>```
+
+if branch is in local then use ```reset``` command
+
+## GitHub
+
+GitHub provide hosting platform for our repository
+
+This provides that we can access the code from anywhere and also share the code with people around the world
+
+GitHub is as service that hosts repositories in the cloud and makes it easier to collaborate with other people.
+
+**Similar to GitHub :**
++ Gitlab
++ BitBucket
++ Gerrit
+
+
+##### Git Clone
+
+TO work with the remote repositories hosted in the gitHub we need to get the local copy into the computer
+
+```git clone <remote-repository-url>```
+
+##### GitHub Create Repository
+
+* **Option 1 : Existing Repository**
+
+   If you already have an existing repo locally that you want to get on GitHub
+   1. Create New repo on GitHub
+   2. Connect your local repo(add a remote)
+   3. Push up your changes on GitHub
+
+* **Option 2 : Start From Scrach** 
+    
+    If you haven't begun work on the local repo
+    1. Create New repo on GitHub
+    2. Clone it down to your machine
+    3. Do some work locally
+    4. Push your changes to GitHub
+
+
+#### Git Remote
+
+The git remote command lets you create, view, and delete connections to other repositories
+
+**Remote List**
+
+```git remote```
+
+```git remote -v```
+
+View remote branch
+
+```git remote -r ```
+
+**Add Remote to local repository**
+
+```git remote add <remote-name> <url>```
+
+**Rename remote name**
+
+```git remote rename <old-name> <new-name>```
+
+**Delete Remote**
+
+```git remote remove <remote-name>```
+
+**Push Code from local repository to remote repository**
+
+```git push <remote-name> <branch-name>```
+
+**What is Upstream** 
+
+```-u ``` options allows us to set the upstream of the branch we are pushing
+
+You can think of this as an link between the local branch to a branch in the gitHub
+
+so that next time just type ```git push``` to push your changes 
+
+### Git Fetch 
+
+When you are working on with other collaborators on a gitHub repo.
+
+One of your teammate has pushed up the changes to the master branch, but my local repo doesn't know!
+
+The how do I get those changes ??
+
+This is where  ```git fetch``` and ```git pull``` comes in play
+
+```git fetch ``` and ```git pull``` get those changes from the gitHub repo to your local repo.
+
+#### Git Fetch:
+
++ Download the data changes from remote repository
++ But those changes will not be automatically integrated to our working files
++ It just lets you see what others have been working in, without merging those changes into your local repo.
+
+For fetching from all branch
+
+```git fetch <remote-name>```
+
+For fetching from specific branch
+
+```git fetch <remote-name> <bramch>```
+
+#### Git Pull:
+
++ Git pull is the command we can use to retrive changes from the remote repository
++ Unlike fetch, pull actually updates our HEAD branch with whatever changes are retrieved from the remote
++ In simple words we can say that
+    Go and download data from github and immediately update my local repo with those changes
+
+    Git Pull = Git Fetch + Git Merge
+
+For pulling from all branch
+
+```git pull <remote-name>```
+
+For pulling from specific branch
+
+```git fetch <remote-name> <bramch>```
